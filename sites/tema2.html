@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Легендарні тварини RDR2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>Легендарні тварини в RDR2</header>
+
+<section>
+<h2>Legendary White Bison</h2>
+<img src="https://static.wikia.nocookie.net/reddeadredemption/images/f/f7/Legendary_White_Bison.png" alt="Білий зубр">
+<p>Білий зубр трапляється у північній частині штату Амбаріно...</p>
+</section>
+
+<section>
+<h2>Legendary Beaver</h2>
+<img src="https://static.wikia.nocookie.net/reddeadredemption/images/0/0d/Legendary_Beaver.png" alt="Легендарний бобер">
+<p>Місце розташування – гора Елізіан на узбережжі річки Камасса...</p>
+</section>
+
+<section>
+<h2>Legendary Grizzly Bear</h2>
+<img src="https://static.wikia.nocookie.net/reddeadredemption/images/b/b4/Legendary_Grizzly_Bear.png" alt="Грізлі">
+<p>Великий грізлі «Брумас» шукайте на скелях Некоті...</p>
+</section>
+
+<section>
+<h2>Legendary Buck</h2>
+<img src="https://static.wikia.nocookie.net/reddeadredemption/images/f/f5/Legendary_Buck.png" alt="Легендарний олень">
+<p>Пієбальдний олень мешкає в центральній частині рівнини Біґ-Веллі...</p>
+</section>
+
+<section>
+<h2>Legendary Cougar</h2>
+<img src="https://static.wikia.nocookie.net/reddeadredemption/images/9/90/Legendary_Cougar.png" alt="Легендарна пума">
+<p>Живе на заході штату Нью-Остіна...</p>
+</section>
+
+<a class="button" href="https://t.me/MiniWikiProjectBot" target="_blank">Повернутися до бота</a>
+<script>
+const sections = document.querySelectorAll('section');
+const gradients = ['gradient1','gradient2','gradient3','gradient4','gradient5','gradient6'];
+
+window.addEventListener('scroll', () => {
+    sections.forEach((sec, idx) => {
+        const rect = sec.getBoundingClientRect();
+        if(rect.top < window.innerHeight*0.75 && rect.bottom > 0) {
+            sec.className = 'section ' + gradients[idx % gradients.length];
+        }
+    });
+});
+</script>
+
+</body>
+</html>
